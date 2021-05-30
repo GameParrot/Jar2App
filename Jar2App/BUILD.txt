@@ -1,0 +1,2 @@
+cp -R '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin' /tmp/Java
+After building, rm -rf /tmp/Java

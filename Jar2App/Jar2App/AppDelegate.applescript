@@ -124,6 +124,12 @@ script AppDelegate
         do shell script "defaults write ~/Library/Preferences/com.gameparrot.Jar2App.plist AutoUpdate 0"
         end if
     end updatesettings_
+    on githubpage_(sender)
+        do shell script "open 'https://github.com/GameParrot/Jar2App'"
+    end githubpage_
+    on issuepage_(sender)
+        do shell script "open 'https://github.com/GameParrot/Jar2App/issues'"
+    end issuepage_
 	on applicationShouldTerminate_(sender)
 		-- Insert code here to do any housekeeping before your application quits 
 		return current application's NSTerminateNow

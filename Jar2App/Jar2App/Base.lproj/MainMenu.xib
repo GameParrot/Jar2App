@@ -351,6 +351,25 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Help" id="QZ3-dT-waj">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="aUS-TE-Ph8">
+                        <items>
+                            <menuItem title="Main GitHub page" id="0fM-7H-iJ8">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="githubpage:" target="Voe-Tx-rLC" id="3eo-11-V55"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="GitHub issue page" id="nbM-x4-PTx">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="issuepage:" target="Voe-Tx-rLC" id="Y4Y-1x-T45"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="139" y="154"/>
         </menu>
