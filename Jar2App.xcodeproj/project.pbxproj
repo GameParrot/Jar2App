@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C451B29F26558F87009C0AA9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C451B29E26558F87009C0AA9 /* Info.plist */; };
+		C451B2A126558FAA009C0AA9 /* PkgInfo in Resources */ = {isa = PBXBuildFile; fileRef = C451B2A026558FAA009C0AA9 /* PkgInfo */; };
+		C48B1A5D2645C874008C2BE5 /* Java in Resources */ = {isa = PBXBuildFile; fileRef = C48B1A5C2645C874008C2BE5 /* Java */; };
+		C494CC632655331D0092F9FD /* defaultapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = C494CC622655331D0092F9FD /* defaultapp.icns */; };
+		C4D7AF132645B536004E2ED9 /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D7AF122645B536004E2ED9 /* AppleScriptObjC.framework */; };
+		C4D7AF162645B536004E2ED9 /* AppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = C4D7AF152645B536004E2ED9 /* AppDelegate.applescript */; };
+		C4D7AF182645B537004E2ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D7AF172645B537004E2ED9 /* Assets.xcassets */; };
+		C4D7AF1B2645B537004E2ED9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D7AF192645B537004E2ED9 /* MainMenu.xib */; };
+		C4D7AF1E2645B537004E2ED9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D7AF1D2645B537004E2ED9 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C451B29E26558F87009C0AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = defaultapp/Info.plist; sourceTree = SOURCE_ROOT; };
+		C451B2A026558FAA009C0AA9 /* PkgInfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PkgInfo; path = defaultapp/PkgInfo; sourceTree = SOURCE_ROOT; };
+		C48B1A5C2645C874008C2BE5 /* Java */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Java; path = ../../../../private/tmp/Java; sourceTree = "<group>"; };
+		C494CC622655331D0092F9FD /* defaultapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = defaultapp.icns; sourceTree = "<group>"; };
+		C4D7AF0F2645B536004E2ED9 /* Jar2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jar2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4D7AF122645B536004E2ED9 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		C4D7AF152645B536004E2ED9 /* AppDelegate.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = AppDelegate.applescript; sourceTree = "<group>"; };
+		C4D7AF172645B537004E2ED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4D7AF1A2645B537004E2ED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C4D7AF1C2645B537004E2ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4D7AF1D2645B537004E2ED9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4D7AF0C2645B536004E2ED9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D7AF132645B536004E2ED9 /* AppleScriptObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4D7AF062645B536004E2ED9 = {
+			isa = PBXGroup;
+			children = (
+				C4D7AF142645B536004E2ED9 /* Jar2App */,
+				C4D7AF112645B536004E2ED9 /* Frameworks */,
+				C4D7AF102645B536004E2ED9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4D7AF102645B536004E2ED9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4D7AF0F2645B536004E2ED9 /* Jar2App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4D7AF112645B536004E2ED9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4D7AF122645B536004E2ED9 /* AppleScriptObjC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4D7AF142645B536004E2ED9 /* Jar2App */ = {
+			isa = PBXGroup;
+			children = (
+				C4D7AF152645B536004E2ED9 /* AppDelegate.applescript */,
+				C4D7AF172645B537004E2ED9 /* Assets.xcassets */,
+				C451B29E26558F87009C0AA9 /* Info.plist */,
+				C451B2A026558FAA009C0AA9 /* PkgInfo */,
+				C494CC622655331D0092F9FD /* defaultapp.icns */,
+				C48B1A5C2645C874008C2BE5 /* Java */,
+				C4D7AF192645B537004E2ED9 /* MainMenu.xib */,
+				C4D7AF1C2645B537004E2ED9 /* Info.plist */,
+				C4D7AF1D2645B537004E2ED9 /* main.m */,
+			);
+			path = Jar2App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4D7AF0E2645B536004E2ED9 /* Jar2App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4D7AF212645B537004E2ED9 /* Build configuration list for PBXNativeTarget "Jar2App" */;
+			buildPhases = (
+				C4D7AF0B2645B536004E2ED9 /* Sources */,
+				C4D7AF0C2645B536004E2ED9 /* Frameworks */,
+				C4D7AF0D2645B536004E2ED9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jar2App;
+			productName = Jar2App;
+			productReference = C4D7AF0F2645B536004E2ED9 /* Jar2App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4D7AF072645B536004E2ED9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C4D7AF0E2645B536004E2ED9 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = C4D7AF0A2645B536004E2ED9 /* Build configuration list for PBXProject "Jar2App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4D7AF062645B536004E2ED9;
+			productRefGroup = C4D7AF102645B536004E2ED9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4D7AF0E2645B536004E2ED9 /* Jar2App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4D7AF0D2645B536004E2ED9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C494CC632655331D0092F9FD /* defaultapp.icns in Resources */,
+				C4D7AF182645B537004E2ED9 /* Assets.xcassets in Resources */,
+				C48B1A5D2645C874008C2BE5 /* Java in Resources */,
+				C451B2A126558FAA009C0AA9 /* PkgInfo in Resources */,
+				C4D7AF1B2645B537004E2ED9 /* MainMenu.xib in Resources */,
+				C451B29F26558F87009C0AA9 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4D7AF0B2645B536004E2ED9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D7AF1E2645B537004E2ED9 /* main.m in Sources */,
+				C4D7AF162645B536004E2ED9 /* AppDelegate.applescript in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C4D7AF192645B537004E2ED9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4D7AF1A2645B537004E2ED9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4D7AF1F2645B537004E2ED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C4D7AF202645B537004E2ED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C4D7AF222645B537004E2ED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.7;
+				DEVELOPMENT_TEAM = AHT4F9P2L4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Jar2App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.7;
+				OSACOMPILE_EXECUTE_ONLY = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gameparrot.Jar2App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C4D7AF232645B537004E2ED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.7;
+				DEVELOPMENT_TEAM = AHT4F9P2L4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Jar2App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.7;
+				OSACOMPILE_EXECUTE_ONLY = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gameparrot.Jar2App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4D7AF0A2645B536004E2ED9 /* Build configuration list for PBXProject "Jar2App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4D7AF1F2645B537004E2ED9 /* Debug */,
+				C4D7AF202645B537004E2ED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4D7AF212645B537004E2ED9 /* Build configuration list for PBXNativeTarget "Jar2App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4D7AF222645B537004E2ED9 /* Debug */,
+				C4D7AF232645B537004E2ED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4D7AF072645B536004E2ED9 /* Project object */;
+}
