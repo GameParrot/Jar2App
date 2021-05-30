@@ -1,5 +1,6 @@
 # Jar2App
 Jar2App will let you turn any JAR File into a macOS Application
+
 Building from source:
 1. Copy your Java folder to /tmp/Java. The path of your Java executable should be /tmp/Java/Contents/Home/bin/java. When you are done building, you may delete this folder.
 2. Open the Jar2App Xcode project and archive it. If building fails, make sure the correct team is set in Signing and Capibilities.
