@@ -11,6 +11,7 @@ Building from source:
   1. Open the dmg file and run the installer (you may have to right click and choose open to open it).
   2. If it asks you if you want to use the recomended version of Java, the recomended version of Java will use the version of openJDK (Java JDK SE is not recomended for this) on your system to create a version of Java that only takes up 90MB. If you need other things like JavaFX, you will have to not used the recomended version and choose a Java folder that supports it.
   When choosing a Java folder, make sure the Java executable is {chosen_folder}/Contents/Home/bin/java. Then, installation will begin.
-  To greate your app, choose Start Conversion and follow the steps. You can configure update settings in the main menu.
+  To create your app, click Start Conversion and follow the steps. You can configure update settings in the main menu.
+  Note: The apps generated work best on macOS Big Sur or newer.
 
 Please report any bugs that you find so I can fix them.
