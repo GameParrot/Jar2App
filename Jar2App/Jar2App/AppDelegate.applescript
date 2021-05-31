@@ -24,7 +24,9 @@ script AppDelegate
                 set curvir to do shell script "defaults read '" & the POSIX path of (path to current application as text) & "Contents/Info.plist' CFBundleShortVersionString"
                 if latvir > curvir then
                     -- This is the code that runs if there is an update.
-                    display alert "Update available! Do you want to update?" buttons {"Cancel", "OK"}
+                    set releasenotes to do shell script "curl -L 'https://raw.githubusercontent.com/GameParrot/Jar2App/main/releasenotes/releasnotes.txt'"
+                    display alert "Update available! Do you want to update?
+                    " & releasenotes buttons {"Cancel", "OK"}
                     if button returned of result is "OK" then
                         do shell script "echo 'cp -R /Applications/Jar2App.app/Contents/Resources/Java /tmp/Java
                         rm -rf /Applications/Jar2App.app
@@ -88,7 +90,9 @@ script AppDelegate
         set curvir to do shell script "defaults read '" & the POSIX path of (path to current application as text) & "Contents/Info.plist' CFBundleShortVersionString"
         if latvir > curvir then
             -- This is the code that runs if there is an update.
-            display alert "Update available! Do you want to update?" buttons {"Cancel", "OK"}
+            set releasenotes to do shell script "curl -L 'https://raw.githubusercontent.com/GameParrot/Jar2App/main/releasenotes/releasnotes.txt'"
+            display alert "Update available! Do you want to update?
+            " & releasenotes buttons {"Cancel", "OK"}
             if button returned of result is "OK" then
                 do shell script "echo 'cp -R /Applications/Jar2App.app/Contents/Resources/Java /tmp/Java
                 rm -rf /Applications/Jar2App.app
@@ -130,6 +134,12 @@ script AppDelegate
     on issuepage_(sender)
         do shell script "open 'https://github.com/GameParrot/Jar2App/issues'"
     end issuepage_
+    on changeexec_(sender)
+        set theJavaRoot to the POSIX Path of (choose folder with prompt "Please choose Java folder (likely JDK-version.jdk)")
+        do shell script "cp -R '" & theJavaRoot & "' /tmp/Jar2AppJava/"
+        do shell script "rm -rf /Applications/Jar2App.app/Contents/Resources/Java
+        mv -v /tmp/Jar2AppJava /Applications/Jar2App.app/Contents/Resources/Java" with administrator privileges
+    end changeexec_
 	on applicationShouldTerminate_(sender)
 		-- Insert code here to do any housekeeping before your application quits 
 		return current application's NSTerminateNow
