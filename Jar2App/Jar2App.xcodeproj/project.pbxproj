@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4025E162666D08A0047773D /* Java in Resources */ = {isa = PBXBuildFile; fileRef = C4025E152666D08A0047773D /* Java */; };
 		C451B29F26558F87009C0AA9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C451B29E26558F87009C0AA9 /* Info.plist */; };
 		C451B2A126558FAA009C0AA9 /* PkgInfo in Resources */ = {isa = PBXBuildFile; fileRef = C451B2A026558FAA009C0AA9 /* PkgInfo */; };
-		C48B1A5D2645C874008C2BE5 /* Java in Resources */ = {isa = PBXBuildFile; fileRef = C48B1A5C2645C874008C2BE5 /* Java */; };
 		C494CC632655331D0092F9FD /* defaultapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = C494CC622655331D0092F9FD /* defaultapp.icns */; };
 		C4D7AF132645B536004E2ED9 /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D7AF122645B536004E2ED9 /* AppleScriptObjC.framework */; };
 		C4D7AF162645B536004E2ED9 /* AppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = C4D7AF152645B536004E2ED9 /* AppDelegate.applescript */; };
@@ -19,9 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4025E152666D08A0047773D /* Java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Java; sourceTree = SOURCE_ROOT; };
 		C451B29E26558F87009C0AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = defaultapp/Info.plist; sourceTree = SOURCE_ROOT; };
 		C451B2A026558FAA009C0AA9 /* PkgInfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PkgInfo; path = defaultapp/PkgInfo; sourceTree = SOURCE_ROOT; };
-		C48B1A5C2645C874008C2BE5 /* Java */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Java; path = ../../../../private/tmp/Java; sourceTree = "<group>"; };
 		C494CC622655331D0092F9FD /* defaultapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = defaultapp.icns; sourceTree = "<group>"; };
 		C4D7AF0F2645B536004E2ED9 /* Jar2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jar2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D7AF122645B536004E2ED9 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
@@ -76,8 +76,8 @@
 				C4D7AF172645B537004E2ED9 /* Assets.xcassets */,
 				C451B29E26558F87009C0AA9 /* Info.plist */,
 				C451B2A026558FAA009C0AA9 /* PkgInfo */,
+				C4025E152666D08A0047773D /* Java */,
 				C494CC622655331D0092F9FD /* defaultapp.icns */,
-				C48B1A5C2645C874008C2BE5 /* Java */,
 				C4D7AF192645B537004E2ED9 /* MainMenu.xib */,
 				C4D7AF1C2645B537004E2ED9 /* Info.plist */,
 				C4D7AF1D2645B537004E2ED9 /* main.m */,
@@ -143,9 +143,9 @@
 			files = (
 				C494CC632655331D0092F9FD /* defaultapp.icns in Resources */,
 				C4D7AF182645B537004E2ED9 /* Assets.xcassets in Resources */,
-				C48B1A5D2645C874008C2BE5 /* Java in Resources */,
 				C451B2A126558FAA009C0AA9 /* PkgInfo in Resources */,
 				C4D7AF1B2645B537004E2ED9 /* MainMenu.xib in Resources */,
+				C4025E162666D08A0047773D /* Java in Resources */,
 				C451B29F26558F87009C0AA9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
