@@ -33,7 +33,7 @@ script AppDelegate
                 display dialog "Do you want to use the recommended version of Java?"
                 do shell script "mkdir /tmp/Java
                 mkdir /tmp/Java/Contents
-                jlink --add-modules java.se --output /tmp/Java/Contents/Home"
+                jlink --add-modules java.se --compress=2 --output /tmp/Java/Contents/Home"
                 set theJavaRoot to "/tmp/Java/"
             on error
                 set theJavaRoot to choose folder with prompt "Please choose Java folder (likely JDK-version.jdk)"
