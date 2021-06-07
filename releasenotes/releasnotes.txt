@@ -1,2 +1,2 @@
 Release notes:
-- Added ability to change Java executable
+- Added ability to add JVM Arguments
