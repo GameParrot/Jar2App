@@ -50,6 +50,14 @@ script AppDelegate
             set theIcon to the POSIX path of (choose file with prompt "Chosse an ICNS icon:" of type {"public.image"})
         end if
         set thejar to the POSIX path of (choose file with prompt "Chosse an JAR:" of type {"jar"})
+        set addargsyn to display dialog "Do you want to specify additional arguments?" buttons {"No", "Yes"}
+        if button returned of addargsyn is "Yes" then
+            set addvmargs to text returned of (display dialog "JVM Arguments (leave blank for none)" default answer "")
+            set addjarargs to text returned of (display dialog "JAR File Arguments (leave blank for none)" default answer "")
+            else
+            set addvmargs to ""
+            set addjarargs to ""
+        end if
         log "Creating application..."
         set uuidgener to do shell script "uuidgen"
         -- Below is the code that bundles the app. The bash script inside is the code that is run the app is opened.
@@ -62,7 +70,7 @@ script AppDelegate
         cp '" & thejar & "' /tmp/java2app.app/Contents/Resources/javajar.jar
         echo '#!/bin/bash
         curdir=$(dirname \"$0\")
-        \"$curdir\"/\"" & text returned of appname & "\" -Dapple.awt.application.appearance=system -Dapple.laf.useScreenMenuBar=true -Xdock:name=\"" & text returned of appname & "\" -Xdock:icon=\"$curdir\"/../\"Resources/JavaApp.icns\" -jar \"$curdir\"/../\"Resources/javajar.jar\"' > '/tmp/java2app.app/Contents/MacOS/" & text returned of appname & "Launch'
+        \"$curdir\"/\"" & text returned of appname & "\" " & addvmargs & " -Dapple.awt.application.appearance=system -Dapple.laf.useScreenMenuBar=true -Xdock:name=\"" & text returned of appname & "\" -Xdock:icon=\"$curdir\"/../\"Resources/JavaApp.icns\" -jar \"$curdir\"/../\"Resources/javajar.jar\" " & addjarargs & "' > '/tmp/java2app.app/Contents/MacOS/" & text returned of appname & "Launch'
         chmod +x '/tmp/java2app.app/Contents/MacOS/" & text returned of appname & "Launch'
         cp -R /Applications/Jar2App.app/Contents/Resources/Java /tmp/java2app.app/Contents/Resources/Java
         defaults write /tmp/java2app.app/Contents/Info.plist CFBundleName '" & text returned of appname & "'
