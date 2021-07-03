@@ -11,7 +11,12 @@ script AppDelegate
 	
 	-- IBOutlets
 	property theWindow : missing value
-	
+    property jarnametxt : missing value
+    property jvmargtxt : missing value
+    property jarargtxt : missing value
+    property thejarpth : missing value
+    property theiconpth : missing value
+    property outputfolderpth : missing value
 	on applicationWillFinishLaunching_(aNotification)
 		-- Insert code here to initialize your application before any files are opened
         try
@@ -43,21 +48,27 @@ script AppDelegate
         end try
 	end applicationWillFinishLaunching_
 	on createNewApp_(sender)
-        -- Asks for info about the app.
-        set appname to display dialog "App name" default answer ""
-        set iconyes to display dialog "Do you want a custom icon?" buttons {"No", "Yes"}
-        if button returned of iconyes is "yes" then
-            set theIcon to the POSIX path of (choose file with prompt "Chosse an ICNS icon:" of type {"public.image"})
+        -- Gets about the app.
+        if thejarpth's stringValue as text is "defaultJar" then
+            display alert "Please choose a JAR File."
+            return
+            nojarFound
         end if
-        set thejar to the POSIX path of (choose file with prompt "Chosse an JAR:" of type {"jar"})
-        set addargsyn to display dialog "Do you want to specify additional arguments?" buttons {"No", "Yes"}
-        if button returned of addargsyn is "Yes" then
-            set addvmargs to text returned of (display dialog "JVM Arguments (leave blank for none)" default answer "")
-            set addjarargs to text returned of (display dialog "JAR File Arguments (leave blank for none)" default answer "")
-            else
-            set addvmargs to ""
-            set addjarargs to ""
+        if outputfolderpth's stringValue as text is "outputFolder" then
+            display alert "Please choose an output folder."
+            return
+            noFolderFound
         end if
+        if jarnametxt's stringValue as text is "" then
+            display alert "No name specified."
+            return
+            missingName
+        end if
+        set appname to jarnametxt's stringValue as text
+            set theIcon to theiconpth's stringValue as text
+        set thejar to thejarpth's stringValue as text
+            set addvmargs to jvmargtxt's stringValue as text
+            set addjarargs to jarargtxt's stringValue as text
         log "Creating application..."
         set uuidgener to do shell script "uuidgen"
         -- Below is the code that bundles the app. The bash script inside is the code that is run the app is opened.
@@ -70,26 +81,28 @@ script AppDelegate
         cp '" & thejar & "' /tmp/java2app.app/Contents/Resources/javajar.jar
         echo '#!/bin/bash
         curdir=$(dirname \"$0\")
-        \"$curdir\"/\"" & text returned of appname & "\" " & addvmargs & " -Dapple.awt.application.appearance=system -Dapple.laf.useScreenMenuBar=true -Xdock:name=\"" & text returned of appname & "\" -Xdock:icon=\"$curdir\"/../\"Resources/JavaApp.icns\" -jar \"$curdir\"/../\"Resources/javajar.jar\" " & addjarargs & "' > '/tmp/java2app.app/Contents/MacOS/" & text returned of appname & "Launch'
-        chmod +x '/tmp/java2app.app/Contents/MacOS/" & text returned of appname & "Launch'
+        \"$curdir\"/\"" & appname & "\" " & addvmargs & " -Dapple.awt.application.appearance=system -Dapple.laf.useScreenMenuBar=true -Xdock:name=\"" & appname & "\" -Xdock:icon=\"$curdir\"/../\"Resources/JavaApp.icns\" -jar \"$curdir\"/../\"Resources/javajar.jar\" " & addjarargs & "' > '/tmp/java2app.app/Contents/MacOS/" & appname & "Launch'
+        chmod +x '/tmp/java2app.app/Contents/MacOS/" & appname & "Launch'
         cp -R /Applications/Jar2App.app/Contents/Resources/Java /tmp/java2app.app/Contents/Resources/Java
-        defaults write /tmp/java2app.app/Contents/Info.plist CFBundleName '" & text returned of appname & "'
-        ln -s '../Resources/Java/Contents/Home/bin/java' '/tmp/java2app.app/Contents/MacOS/" & text returned of appname & "'
-        defaults write /tmp/java2app.app/Contents/Info.plist CFBundleExecutable '" & text returned of appname & "Launch'
+        defaults write /tmp/java2app.app/Contents/Info.plist CFBundleName '" & appname & "'
+        ln -s '../Resources/Java/Contents/Home/bin/java' '/tmp/java2app.app/Contents/MacOS/" & appname & "'
+        defaults write /tmp/java2app.app/Contents/Info.plist CFBundleExecutable '" & appname & "Launch'
         defaults write /tmp/java2app.app/Contents/Info.plist CFBundleIdentifier 'com.gameparrot.Jar2App-" & uuidgener & "'"
         log "Successfully created application"
         -- Below is the code that adds the icon specified, or the default icon if none is specified.
-        if button returned of iconyes is "yes" then
             do shell script "cp '" & theIcon & "' /tmp/java2app.app/Contents/Resources/JavaApp.icns"
             log "Icon added"
-        else
-            do shell script "cp /Applications/Jar2App.app/Contents/Resources/defaultapp.icns /tmp/java2app.app/Contents/Resources/JavaApp.icns"
-            log "Default icon added"
-        end if
-        set folderjava to the POSIX path of (choose folder with prompt "Location of app")
+        set folderjava to outputfolderpth's stringValue as text
         -- Moves the app to the folder specified.
-        do shell script "mv -v /tmp/java2app.app '" & folderjava & text returned of appname & ".app'"
+        do shell script "mv -v /tmp/java2app.app '" & folderjava & appname & ".app'"
         log "Application moved"
+        display alert "Successfully created application"
+        set theiconpth's stringValue to "/Applications/Jar2App.app/Contents/Resources/defaultapp.icns"
+        set jarnametxt's stringValue to ""
+        set thejarpth's stringValue to "defaultJar"
+        set jarargtxt's stringValue to ""
+        set jvmargtxt's stringValue to ""
+        set outputfolderpth's stringValue to "outputFolder"
     end createNewApp_
     on checkupdate_(sender)
         -- Gets a file containing the latest version.
@@ -148,6 +161,15 @@ script AppDelegate
         do shell script "rm -rf /Applications/Jar2App.app/Contents/Resources/Java
         mv -v /tmp/Jar2AppJava /Applications/Jar2App.app/Contents/Resources/Java" with administrator privileges
     end changeexec_
+    on choosejar_(sender)
+        set thejarpth's stringValue to the POSIX path of (choose file with prompt "Chosse an JAR:" of type {"jar"})
+    end choosejar_
+    on chooseicon_(sender)
+        set theiconpth's stringValue to the POSIX path of (choose file with prompt "Chosse an ICNS icon:" of type {"public.image"})
+    end chooseicon_
+    on outputfol_(sender)
+        set outputfolderpth's stringValue to the POSIX path of (choose folder with prompt "Location of app")
+    end outputfol_
 	on applicationShouldTerminate_(sender)
 		-- Insert code here to do any housekeeping before your application quits 
 		return current application's NSTerminateNow
