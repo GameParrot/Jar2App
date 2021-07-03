@@ -1,2 +1,2 @@
 Release notes:
-- Added ability to add JVM Arguments
+Jar2App 3.0 brings an all new creation UI.
